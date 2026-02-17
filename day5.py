@@ -20,8 +20,29 @@ for w in weights:
         heavy_load=heavy_load+[w]
     elif w>60:
         overload=overload+[w]
+full_name="injam venkata gopi harsha vardhan"
+L=0
+for ch in full_name:
+    if ch!=" ":
+        L=L+1
+PLI=L%3
+removed_items=very_light+overload
+affected_items=len(removed_items)
+very_light=[]
+overload=[]
+valid_count=len(normal_load)+len(heavy_load)
+final_elements=normal_load+heavy_load+invalid_entries
+print("Full Name:",full_name)
+print("Full Name Length (L):",L)
+print("PLI Value:",PLI)
+print("Applied Rule: Rule C")
+print("Final Loading Plan:")
 print("Very Light:",very_light)
 print("Normal Load:",normal_load)
 print("Heavy Load:",heavy_load)
 print("Overload:",overload)
 print("Invalid Entries:",invalid_entries)
+print("Total Valid Weights:",valid_count)
+print("Affected Items due to PLI:",affected_items)
+print("Items removed because of personalization:",removed_items)
+print("All Remaining Elements:",final_elements)
