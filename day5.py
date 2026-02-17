@@ -32,6 +32,11 @@ very_light=[]
 overload=[]
 valid_count=len(normal_load)+len(heavy_load)
 final_elements=normal_load+heavy_load+invalid_entries
+destination=input("Enter Destination of Load: ")
+count=0
+for ch in destination:
+    if ch!=" ":
+        count=count+1
 print("Full Name:",full_name)
 print("Full Name Length (L):",L)
 print("PLI Value:",PLI)
@@ -46,3 +51,7 @@ print("Total Valid Weights:",valid_count)
 print("Affected Items due to PLI:",affected_items)
 print("Items removed because of personalization:",removed_items)
 print("All Remaining Elements:",final_elements)
+if count%2==0:
+    print("** Go Safe **")
+else:
+    print("!! Drive Safe !!")
