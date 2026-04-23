@@ -1,0 +1,135 @@
+# Autonomous Smart City Data Intelligence System
+
+## Overview
+
+This project simulates and analyzes smart city data using Python.
+It generates multi-source data (traffic, air quality, energy), processes it, and identifies high-risk zones using data science techniques.
+
+The system adapts based on user input and provides insights about city conditions.
+
+---
+
+## Features
+
+* Random simulation of city zones
+* Data stored using list of dictionaries
+* Conversion to Pandas DataFrame
+* NumPy-based statistical analysis
+* Custom risk score calculation
+* Priority-based analysis (Air Quality / Traffic / Energy)
+* Custom sorting implementation (no built-in sorting)
+* Pattern detection:
+
+  * High-risk zones
+  * Stability analysis
+  * Risk clusters
+* Final decision system:
+
+  * City Stable
+  * Moderate Risk
+  * High Alert
+  * Critical Emergency
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* math module
+* random module
+
+---
+
+## How It Works
+
+1. User provides:
+
+   * Name
+   * Roll number
+   * Number of zones
+   * Priority (Air Quality / Traffic / Energy)
+
+2. System generates zone data:
+
+   * Traffic (0–100)
+   * Air Quality Index (0–300)
+   * Energy Consumption (0–500)
+
+3. Data Processing:
+
+   * Classification of zones
+   * Risk score calculation using weighted formula
+   * Transformation using mathematical functions
+
+4. Analysis:
+
+   * Mean values
+   * Top 3 risk zones
+   * Pattern detection
+   * Stability check
+
+5. Output:
+
+   * DataFrame
+   * Risk statistics
+   * Final city condition
+
+---
+
+## Priority Logic
+
+The system changes behavior based on selected priority:
+
+* Air Quality → sorts zones with lowest AQI first
+* Traffic → sorts zones with lowest traffic first
+* Energy → sorts zones with lowest energy consumption first
+
+This makes the system adaptive to different city needs.
+
+---
+
+## Custom Logic Implemented
+
+* Manual sorting algorithm (bubble sort)
+* Dynamic risk scoring based on priority
+* Pattern detection using thresholds and variance
+* Personalized data manipulation using roll number
+
+---
+
+## Example Output
+
+* DataFrame of zones
+* Top 3 high-risk zones
+* (max_risk, avg_risk, min_risk) tuple
+* Stability status
+* Risk clusters
+* Final system decision
+
+---
+
+## Smart City Insight
+
+A smart city is not just data-driven, but decision-driven.
+It continuously monitors key parameters and adapts strategies to prevent risks before they escalate.
+
+---
+
+## How to Run
+
+1. Install dependencies:
+   pip install pandas numpy
+
+2. Run the script:
+   python main.py
+
+3. Enter required inputs when prompted
+
+---
+
+## Conclusion
+
+This project demonstrates how data science concepts can be applied to real-world smart city problems.
+It highlights the importance of adaptive systems in urban management.
